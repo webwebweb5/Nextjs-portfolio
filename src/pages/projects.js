@@ -4,19 +4,20 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import { fp1, p1, p2, p3, p4 } from "../../public/images/projects";
 import { motion } from "framer-motion";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="relative w-full flex items-center justify-between rounded-3xl rounded-br-2xl border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light" />
+    <article className="relative w-full flex items-center justify-between rounded-3xl rounded-br-2xl border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 xs:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+        className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
         {/* 41831 */}
         <FramerImage
@@ -28,8 +29,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         />
       </Link>
 
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6 ">
-        <span className="text-primary dark:text-primaryDark font-medium text-xl">
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
+        <span className="text-react dark:text-primaryDark font-medium text-xl sm:text-lg">
           {type}
         </span>
         <Link
@@ -37,11 +38,13 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light">
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-2xl">
             {title}
           </h2>
         </Link>
-        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light sm:mt-1 sm:text-sm">
+          {summary}
+        </p>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
@@ -49,7 +52,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark"
+            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base"
           >
             Visit Project
           </Link>
@@ -60,39 +63,32 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 };
 const Project = ({ type, title, img, link, github }) => {
   return (
-    <article className="relative w-full flex flex-col items-center justify-between rounded-3xl border border-solid border-dark bg-light p-6 dark:bg-dark dark:border-light">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light" />
+    <article className="ease flex h-max w-full flex-col overflow-hidden rounded-lg border border-solid border-dark/50 bg-white shadow-xl transition-all duration-300 first:my-0 hover:shadow-none dark:border-light/50 dark:bg-dark">
       <Link
         href={link}
         target="_blank"
-        className="w-full cursor-pointer overflow-hidden rounded-lg"
+        className="group relative h-auto w-full overflow-hidden"
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
-      </Link>
-
-      <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary dark:text-primaryDark font-medium text-xl">
-          {type}
-        </span>
-        <Link
-          href={link}
-          target="_blank"
-          className="hover:underline underline-offset-2"
-        >
-          <h2 className="my-2 w-full text-left text-3xl font-bold">{title}</h2>
-        </Link>
-        <div className="w-full mt-2 flex items-center justify-between">
-          <Link
-            href={link}
-            target="_blank"
-            className="text-lg font-semibold underline"
-          >
-            Visit
-          </Link>
-          <Link href={github} target="_blank" className="w-8">
-            <GithubIcon />
-          </Link>
+        <div className="absolute top-0 z-10 h-full w-full group-hover:bg-dark/10">
+          &nbsp;
         </div>
+        <FramerImage
+          src={img}
+          alt={title}
+          className="h-[15rem] w-full brightness-100"
+        />
+      </Link>
+      <div className="flex flex-col justify-between p-6 xs:p-4">
+        <div className="flex w-full items-center justify-between">
+          <span className="w-max rounded-sm bg-reactLight/20 py-1 px-2 text-sm font-semibold uppercase text-reactLight dark:text-primaryDark">
+            {type}
+          </span>
+        </div>
+        <Link href={link} target="_blank">
+          <h2 className="mt-2 cursor-pointer text-lg font-semibold   decoration-react decoration-solid decoration-2 underline-offset-2 hover:underline dark:text-light dark:decoration-primaryDark xl:text-base md:text-base">
+            {title}
+          </h2>
+        </Link>
       </div>
     </article>
   );
@@ -108,76 +104,91 @@ const projects = () => {
           content="Phiriyakorn Maneekongrit Portfolio project page"
         />
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text="Imagination Trumps Knowledge!"
-            className="mb-16 drop-shadow-textBlue dark:drop-shadow-textBlueDark"
+            text="My Project"
+            className="mb-16 drop-shadow-textBlue dark:drop-shadow-textBlueDark dark:sm:drop-shadow-textBlueDarkSm sm:drop-shadow-textBlueSm lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <div className="grid grid-cols-12 gap-24">
-            <div className="col-span-12">
+          <div className="grid grid-cols-12 gap-16 gap-y-16 xl:gap-x-10 lg:gap-x-8 lg:gap-y-12 sm:gap-x-4 sm:gap-y-12">
+            <div className="col-span-12 mb-8 lg:mb-10">
               <FeaturedProject
-                title="Crypto Screener Application"
-                img={project1}
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
-                link="#!"
-                github="#!"
-                type="Featured Project"
+                title="Jobify"
+                img={fp1}
+                summary="Jobify is a comprehensive job management website offering users the ability to track their job history. With visual statistics on pending applications, scheduled interviews, and job rejections, it also provides monthly application insights through bar and area charts. Users can effortlessly add, edit, delete jobs, and modify their profiles."
+                link="https://mern-stack-course-jobify.onrender.com"
+                github="https://github.com/webwebweb5/mern-stack-course-jobify"
+                type="MERN Stack"
               />
             </div>
 
-            <div className="col-span-6">
+            <div className="col-span-4 lg:col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
-                img={project1}
-                link="#!"
+                title="Reactjs Project: Build a Birthday Buddy Reminder To Practice How To Use useState In React."
+                img={p1}
+                link="https://react-vite-p1-birthday.netlify.app/"
                 github="#!"
-                type="Featured Project"
+                type="React"
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-4 lg:col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
-                img={project1}
-                link="#!"
+                title="Reactjs Project: Build a Tours To Practice How To Use useEffect To Fetch Data From API And Show It On The Web Page."
+                img={p2}
+                link="https://react-vite-p2-tours.netlify.app/"
                 github="#!"
-                type="Featured Project"
+                type="React"
+              />
+            </div>
+            <div className="col-span-4 lg:col-span-6 sm:col-span-12">
+              <Project
+                title="Reactjs Project: Build a People Reviews To Practice About Object Destructuring, Calling Method and Ternary Operation In React."
+                img={p3}
+                link="https://react-vite-p3-reviews.netlify.app/"
+                github="#!"
+                type="React"
+              />
+            </div>
+            <div className="col-span-4 lg:col-span-6 sm:col-span-12">
+              <Project
+                title="Reactjs Project: Build a Q&A About Reactjs To Practice How to create Accordion Using State."
+                img={p4}
+                link="https://react-vite-p4-questions.netlify.app/"
+                github="#!"
+                type="React"
               />
             </div>
 
-            <div className="col-span-12">
+            {/* <div className="col-span-12">
               <FeaturedProject
-                title="Crypto Screener Application"
+                title="Jobify"
                 img={project1}
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
+                summary="Jobify is a comprehensive job management website offering users the ability to track their job history. With visual statistics on pending applications, scheduled interviews, and job rejections, it also provides monthly application insights through bar and area charts. Users can effortlessly add, edit, delete jobs, and modify their profiles."
                 link="#!"
                 github="#!"
                 type="Featured Project"
               />
             </div>
 
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
+                title="Jobify"
                 img={project1}
                 link="#!"
                 github="#!"
                 type="Featured Project"
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
+                title="Jobify"
                 img={project1}
                 link="#!"
                 github="#!"
                 type="Featured Project"
               />
-            </div>
+            </div> */}
           </div>
         </Layout>
       </main>
