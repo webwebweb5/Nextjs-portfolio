@@ -34,10 +34,6 @@ export default function Home() {
                 className="!text-6xl !text-left drop-shadow-textBlueHome dark:drop-shadow-textBlueHomeDark slg:!text-5xl lg:!text-center md:!text-4xl md:drop-shadow-textBlueHomeMd dark:md:drop-shadow-textBlueHomeDarkMd sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm md:mt-0">
-                {/* As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects and articles, showcasing my expertise in React.js and
-                web development. */}
                 As a college student pursuing a degree in web development, I am extremely passionate about creating innovative and visually appealing websites and applications.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">

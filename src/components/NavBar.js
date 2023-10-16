@@ -108,11 +108,6 @@ const NavBar = () => {
             title="Projects"
             className="mx-4 rounded"
           />
-          <CustomLink
-            href="/articles"
-            title="Articles"
-            className="ml-4 rounded"
-          />
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap">
@@ -198,12 +193,6 @@ const NavBar = () => {
             <CustomMobileLink
               href="/projects"
               title="Projects"
-              className="rounded"
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/articles"
-              title="Articles"
               className="rounded"
               toggle={handleClick}
             />
