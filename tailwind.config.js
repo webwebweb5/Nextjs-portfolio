@@ -22,6 +22,7 @@ module.exports = {
         bluey: "#42AEE8",
         react: "#37c7ed",
         reactLight: "#61dbfb",
+        node: "#4DB33D"
       },
       animation: {
         "spin-slow": "spin 6s linear infinite",
