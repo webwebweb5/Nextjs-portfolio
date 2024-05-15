@@ -139,7 +139,7 @@ const NavBar = () => {
             <Instagram />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/phiriyakorn"
             target={"_blank"}
             className="w-6 mx-3"
             whileHover={{ y: -4 }}

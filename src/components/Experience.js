@@ -47,38 +47,24 @@ const Experience = () => {
       </h2>
 
       <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
-        {/* <motion.div
+        <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]"
-        /> */}
-        <h3 className="w-full flex flex-col items-center justify-between ml-4 xs:ml-2">No Experience Yet!</h3>
+        />
+        {/* <h3 className="w-full flex flex-col items-center justify-between ml-4 xs:ml-2">
+          No Experience Yet!
+        </h3> */}
 
-        {/* <ul className="w-full flex flex-col items-center justify-between ml-4 xs:ml-2">
+        <ul className="w-full flex flex-col items-center justify-between ml-4 xs:ml-2">
           <Details
-            position="Software Engineer"
-            company="Google"
-            companyLink="https://www.google.com"
-            time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's search engine, including developing new tools for data analysis and visualization."
+            position="Freelancer"
+            company="fastwork.co"
+            companyLink="https://fastwork.co/user/zomsantech"
+            time="2024-Present"
+            address="fastwork"
+            work="Do freelance work together with friends from university. Working on creating websites according to customer needs, using the stack as follows: front-end uses nextjs and reactjs, and back-end uses nodejs and expressjs."
           />
-          <Details
-            position="Software Engineer"
-            company="Google"
-            companyLink="https://www.google.com"
-            time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's search engine, including developing new tools for data analysis and visualization."
-          />
-          <Details
-            position="Software Engineer"
-            company="Google"
-            companyLink="https://www.google.com"
-            time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's search engine, including developing new tools for data analysis and visualization."
-          />
-        </ul> */}
+        </ul>
       </div>
     </div>
   );

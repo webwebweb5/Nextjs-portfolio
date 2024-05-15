@@ -58,7 +58,7 @@ const Education = () => {
             place="Chiang Mai University (CMU)"
             color="text-[#B8775D]"
             link="https://www.camt.cmu.ac.th/index.php/th/"
-            info="This is a four-year Bachelor of Science program in Software Engineering (International Program) that prepares students to develop high-quality software systems to meet global standards. The program focuses on mathematics, algorithms, software system design and programming, management, and language skills."
+            info="I am currently a third-year student at Chiang Mai University, soon to be entering my fourth year, majoring in Software Engineering. I have a GPA of 3.74 and expect to graduate in 2025."
           />
           <Details
             type="The Complete 2022 Web Development Bootcamp"
@@ -70,22 +70,13 @@ const Education = () => {
             info="Become a Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript, Node, React, MongoDB, Web3 and DApps."
           />
           <Details
-            type="MERN Stack Course - MongoDB, Express, React and NodeJS"
+            type="MERN Stack Course (2023) - MongoDB, Express, React and NodeJS"
             instructor="John Smilga"
             time="2023-Completed"
             place="Udemy"
             color="text-[#a435f0]"
             link="https://www.udemy.com/course/mern-stack-course-mongodb-express-react-and-nodejs/"
             info="Build Full Stack Application from Scratch with MongoDB, Express, React and NodeJS."
-          />
-          <Details
-            type="React 18 Tutorial and Projects Course (2023)"
-            instructor="John Smilga"
-            time="2023-Present"
-            place="Udemy"
-            color="text-[#a435f0]"
-            link="https://www.udemy.com/course/react-tutorial-and-projects-course/"
-            info="Learn React by Building 25+ Interesting Projects"
           />
         </ul>
       </div>

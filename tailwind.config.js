@@ -22,7 +22,10 @@ module.exports = {
         bluey: "#42AEE8",
         react: "#37c7ed",
         reactLight: "#61dbfb",
-        node: "#4DB33D"
+        node: "#4DB33D",
+        ejs: "#A91E50",
+        vue: "#42B883",
+        tailwindcss: "#38BDF8"
       },
       animation: {
         "spin-slow": "spin 6s linear infinite",

@@ -2,7 +2,7 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profilePic from "../../public/images/profile/p4-2.jpg";
+import profilePic from "../../public/images/profile/about-me.jpg";
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
@@ -91,7 +91,7 @@ const about = () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  {/* <AnimatedNumbers value={1} /> */}0+
+                  <AnimatedNumbers value={5} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   satisfied clients
@@ -99,7 +99,7 @@ const about = () => {
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={3} />+
+                  <AnimatedNumbers value={7} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   projects completed

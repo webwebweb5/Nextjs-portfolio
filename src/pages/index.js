@@ -52,7 +52,7 @@ export default function Home() {
                   "
                   download={true}
                 >
-                  <span className="absolute -right-1 -top-1 flex h-3 w-3">
+                  <span className="absolute -right-1.5 -top-1.5 flex h-3 w-3">
                     <span className="absolute inline-flex h-3 w-3 animate-ping rounded-full bg-purple-400 opacity-75"></span>
                     <span className="relative inline-flex h-3 w-3 rounded-full bg-purple-400"></span>
                   </span>
@@ -61,7 +61,7 @@ export default function Home() {
                 <Link
                   href="mailto:phiriyakornman@gmail.com"
                   target={"_blank"}
-                  className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
+                  className="ml-6 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
                 >
                   Contact
                 </Link>
